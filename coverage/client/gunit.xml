@@ -1,0 +1,5 @@
+<unitTest version="1">
+  <file path="test/client/components/home.spec.jsx">
+    <testCase name="Home has expected content with deep render" duration="28"/>
+  </file>
+</unitTest>
