@@ -24,16 +24,16 @@ export default class DropDownUtil {
   }
 
   sortMakes(data) {
-    return data.filter((a) => a.isCommon === true);
-  };
+    return data.filter(a => a.isCommon === true);
+  }
 
   sortModels(data) {
     return data.sort((a, b) => {
-      if(a.name.toUpperCase() < b.name.toUpperCase()) return -1;
-      if(a.name.toUpperCase() > b.name.toUpperCase()) return 1;
+      if (a.name.toUpperCase() < b.name.toUpperCase()) return -1;
+      if (a.name.toUpperCase() > b.name.toUpperCase()) return 1;
       return 0;
     });
-  };
+  }
 
   // add an update fn here;
 
@@ -49,14 +49,14 @@ export default class DropDownUtil {
     this.model_name = name;
   }
 
-  setEngineSize(engSize){
-      this.engSize = engSize;
+  setEngineSize(engSize) {
+    this.engSize = engSize;
   }
 
   getYears() {
-    const years = {minYear: 1941, maxYear:  new Date().getFullYear()};
+    const years = { minYear: 1941, maxYear: new Date().getFullYear() };
     return years;
-  };
+  }
 
   async getNewModels(make) {
     const carMakesReq = makeNHTSAReq(
@@ -84,7 +84,7 @@ export default class DropDownUtil {
       return e;
     }
   }
-  
+
   async getAllMakes() {
     const makesReq = makeNHTSAReq(
       "https://vpic.nhtsa.dot.gov/api/vehicles/GetMakesForVehicleType/car?format=json"
@@ -96,14 +96,13 @@ export default class DropDownUtil {
       console.log("Error in the request", e);
       return e;
     }
-  };
+  }
 
   async getMakesByYear(yr) {
     const carQuery = new CarQuery();
     const makeResults = await carQuery.getMakes(yr).then(makes => makes);
     return makeResults;
-  };
-  
+  }
 
   async getAllUSMakesByYear(year) {
     try {
@@ -114,19 +113,22 @@ export default class DropDownUtil {
       console.log("Error in the request", e);
       return e;
     }
-  };
+  }
 
-  async getModels() {
-
-    const searchCriteria = {
-      year: this.year,
-      make: this.make,
-      soldInUSA: true,
-    };
+  async getModels(mk) {
+    const searchCriteria = this.year
+      ? {
+          year: this.year,
+          make: this.make,
+          soldInUSA: true
+        }
+      : mk;
 
     try {
       const carQuery = new CarQuery();
-      const models = await carQuery.getModels(searchCriteria).then(models => models);
+      const models = await carQuery
+        .getModels(searchCriteria)
+        .then(models => models);
       return this.sortModels(models);
     } catch (e) {
       console.log("Error in the request", e);
@@ -134,27 +136,36 @@ export default class DropDownUtil {
     }
   }
 
-  async getTrims() {
+  async getEngineByTrims(criterion) {
     const trimsArr = [];
-    const searchCriteria = {
-      year: this.year,
-      make: this.make,
-    };
+    const searchCriteria = criterion
+      ? criterion
+      : {
+          year: this.year,
+          make: this.make,
+          model: this.model_name
+        };
+
+    searchCriteria.soldInUSA = true;
+
     const carQuery = new CarQuery();
-    const trims = await carQuery.getTrims(searchCriteria).then(engineData => engineData);
+    const trims = await carQuery
+      .getTrims(searchCriteria)
+      .then(engineData => engineData);
+
     trims.forEach(trim => {
-      if(trim.name === this.model_name){
-        trimsArr.push({modelId: trim.modelId, engine: this.getEngine(trim)});
-      };
+      if (trim.name === searchCriteria.model) {
+        trimsArr.push({ modelId: trim.modelId, engine: this.getEngine(trim) });
+      }
     });
     this.trims = trimsArr;
     return trimsArr;
-  };
+  }
 
-  async getModelData(modelId){
+  async getModelData(modelId) {
     const id = modelId ? modeId : this.model_id;
-    
-    if(!id){
+
+    if (!id) {
       return false;
     }
 
@@ -168,12 +179,28 @@ export default class DropDownUtil {
     }
   }
 
-  getEngine(data){
+  getEngine(data) {
     // console.log('data into the engines', data)
     const cylinders = data.engineCyclinders + " Cylinders";
     const engSizeLiters = data.engineCC / 1000;
-    const roundedEngSizeLiters = Number(Math.round(engSizeLiters+'e1')+'e-1') + ' L ';
-    return {cylinders: cylinders, engineSize: roundedEngSizeLiters, trim: data.trim }
+    const roundedEngSizeLiters =
+      Number(Math.round(engSizeLiters + "e1") + "e-1") + " L ";
+    return {
+      cylinders: cylinders,
+      engineSize: roundedEngSizeLiters,
+      trim: data.trim
+    };
   }
 
-};
+  // async getEngineByModel(searchCriteria) {
+  //   const criterion = this.year
+  //     ? {
+  //         year: this.year,
+  //         make: this.make,
+  //         soldInUSA: true
+  //       }
+  //     : searchCriteria;
+
+  //     const trims = await getTrims(searchCriteria);
+  // }
+}

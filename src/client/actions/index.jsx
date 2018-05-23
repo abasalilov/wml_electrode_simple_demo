@@ -16,21 +16,24 @@ export const decNumber = () => {
   };
 };
 
-export const setYear = () => {
+export const setYear = year => {
   return {
-    type: "SET_YEAR"
+    type: "SET_YEAR",
+    year: year
   };
 };
 
-export const setModel = () => {
+export const setModel = model => {
   return {
-    type: "SET_MODEL"
+    type: "SET_MODEL",
+    model: model
   };
 };
 
-export const setMake = () => {
+export const setMake = mk => {
   return {
-    type: "SET_MAKE"
+    type: "SET_MAKE",
+    make: mk
   };
 };
 

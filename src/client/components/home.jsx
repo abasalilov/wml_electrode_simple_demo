@@ -45,16 +45,6 @@ export default () => (
 
     <DropDown />
 
-    <div className={custom["docs-section"]}>
-      <DemoStates />
-    </div>
-
-    <div className={custom["docs-section"]}>
-      <DemoPureStates />
-    </div>
-
-    <div className={custom["docs-section"]}>
-      <DemoButtons />
-    </div>
+    <div className={custom["docs-section"]}>add parts demo here</div>
   </div>
 );
