@@ -1,4 +1,5 @@
 # electrode [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+
 > ls
 
 ## Installation
@@ -9,15 +10,16 @@ $ npm install --save electrode
 
 ## Usage
 
-```js
-var electrode = require('electrode');
+ensure you have the correct system requirements: https://docs.electrode.io/overview/requirements.html
 
-electrode('Rainbow');
-```
+1.  from home directory: npm install -g electrode-ignite
+2.  from this directory: npm install or yarn i
+3.  `sh clap dev`
+4.  navigate to localhost:3000;
+
 ## License
 
 MIT © [abasalilov]()
-
 
 [npm-image]: https://badge.fury.io/js/electrode.svg
 [npm-url]: https://npmjs.org/package/electrode
