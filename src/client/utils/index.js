@@ -115,14 +115,14 @@ export default class DropDownUtil {
     }
   }
 
-  async getModels(mk) {
-    const searchCriteria = this.year
-      ? {
+  async getModels(md) {
+    const searchCriteria = md
+      ? md
+      : {
           year: this.year,
           make: this.make,
           soldInUSA: true
-        }
-      : mk;
+        };
 
     try {
       const carQuery = new CarQuery();
@@ -190,16 +190,4 @@ export default class DropDownUtil {
       trim: data.trim
     };
   }
-
-  // async getEngineByModel(searchCriteria) {
-  //   const criterion = this.year
-  //     ? {
-  //         year: this.year,
-  //         make: this.make,
-  //         soldInUSA: true
-  //       }
-  //     : searchCriteria;
-
-  //     const trims = await getTrims(searchCriteria);
-  // }
 }
