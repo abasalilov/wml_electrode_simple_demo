@@ -18,24 +18,17 @@ import { notify } from "react-notify-toast";
 // The webapp's full HTML will check and call it once the js-content
 // DOM is created.
 //
-require.ensure(
-  ["./sw-registration"],
-  require => {
-    require("./sw-registration")(notify);
-  },
-  "sw-registration"
-);
 //
 
 window.webappStart = () => {
   const initialState = window.__PRELOADED_STATE__;
   const jsContent = document.querySelector(".js-content");
-  const reactStart = (initialState && jsContent.innerHTML) ? hydrate : render;
+  const reactStart = initialState && jsContent.innerHTML ? hydrate : render;
 
   const store = createStore(rootReducer, initialState);
   reactStart(
     <Provider store={store}>
-      <Router history={browserHistory}>{routes()}</Router>
+      <Router history={browserHistory}>{routes}</Router>
     </Provider>,
     jsContent
   );

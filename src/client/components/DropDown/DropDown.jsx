@@ -15,33 +15,74 @@
  */
 
 import React from "react";
-import "../styles/normalize.css";
-import "../styles/raleway.css";
-import skeleton from "../styles/skeleton.css";
-import custom from "../styles/custom.css";
+import "../../styles/normalize.css";
+import "../../styles/raleway.css";
+import skeleton from "../../styles/skeleton.css";
+import custom from "../../styles/custom.css";
 
-export default DropDown () =>
-  <div className={custom.container}>
-    {/**/}
-    <Notifications />
-    {/**/}
+const styles = {
+  select: {
+    width: "20rem"
+  },
+  selectContainer: {
+    display: "flex"
+  }
+};
 
-    <section className={custom.header}>
-      <h2 className={skeleton.title}>
-        woogie boogie {" "}
-        <a href="https://github.com/electrode-io">{"Electrode"} <img src={electrodePng} /></a>
-      </h2>
-    </section>
+export class DropDown extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      year: "",
+      make: ""
+    };
+    this.handleSelectChange = this.handleSelectChange.bind(this);
+  }
+  renderOptions(data) {
+    return data.map(datum => {
+      const { value } = datum;
+      return (
+        <option key={value} value={value}>
+          {value}
+        </option>
+      );
+    });
+  }
 
-    <div className={custom["docs-section"]}>
-      <DemoStates />
-    </div>
+  handleSelectChange(e) {
+    this.setState({ [e.target.name]: e.target.value });
+  }
 
-    <div className={custom["docs-section"]}>
-      <DemoPureStates />
-    </div>
+  render() {
+    return (
+      <div className={custom.container}>
+        <section className={custom.header}>
+          <h2 className={skeleton.title}>YMM drop down </h2>
+        </section>
+        <div className={custom["docs-section"]}>
+          <div style={styles.selectContainer}>
+            <div>Year</div>
+            <select
+              name={"year"}
+              style={styles.select}
+              value={this.state.year}
+              onChange={this.handleSelectChange}
+            >
+              {this.renderOptions([{ value: "1914" }, { value: "1915" }])}
+            </select>
 
-    <div className={custom["docs-section"]}>
-      <DemoButtons />
-    </div>
-  </div>;
+            <div>Make</div>
+            <select
+              name={"make"}
+              style={styles.select}
+              value={this.state.make}
+              onChange={this.handleSelectChange}
+            >
+              {this.renderOptions([{ value: "toyota" }, { value: "corrolla" }])}
+            </select>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}

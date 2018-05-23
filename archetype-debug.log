@@ -1,8 +1,8 @@
-2018-05-22T21:42:03.391Z - info: No custom webpack config webpack.config.dev.js found in dirs CWD; CWD/archetype/config/webpack
-2018-05-22T21:42:03.406Z - info: Entry point configuration /Users/al/Desktop/electrode/wml_electrode_tutorial/src/client/entry.config.js is not found, using default entry point...
-2018-05-22T21:42:04.702Z - info: PWA enabled with config from /Users/al/Desktop/electrode/wml_electrode_tutorial/config/sw-config.js
-2018-05-22T21:42:04.883Z - info: Not disabling NodeSourcePlugin.  NODE_ENV: 'development'
-2018-05-22T21:42:04.884Z - verbose: Final Webpack config {
+2018-05-22T22:57:24.751Z - info: No custom webpack config webpack.config.dev.js found in dirs CWD; CWD/archetype/config/webpack
+2018-05-22T22:57:24.759Z - info: Entry point configuration /Users/al/Desktop/electrode/wml_electrode_simple_demo/src/client/entry.config.js is not found, using default entry point...
+2018-05-22T22:57:25.247Z - info: PWA enabled with config from /Users/al/Desktop/electrode/wml_electrode_simple_demo/config/sw-config.js
+2018-05-22T22:57:25.320Z - info: Not disabling NodeSourcePlugin.  NODE_ENV: 'development'
+2018-05-22T22:57:25.321Z - verbose: Final Webpack config {
   "cache": true,
   "plugins": [
     {
@@ -31,7 +31,7 @@
     {
       "options": {
         "options": {
-          "context": "/Users/al/Desktop/electrode/wml_electrode_tutorial/src",
+          "context": "/Users/al/Desktop/electrode/wml_electrode_simple_demo/src",
           "stylus": {
             "use": []
           }
@@ -71,7 +71,7 @@
         "persistentCache": true,
         "inject": false,
         "background": "#FFFFFF",
-        "logo": "/Users/al/Desktop/electrode/wml_electrode_tutorial/src/client/images/electrode.png",
+        "logo": "/Users/al/Desktop/electrode/wml_electrode_simple_demo/src/client/images/electrode.png",
         "title": "electrode",
         "icons": {
           "android": true,
@@ -135,7 +135,7 @@
           }
         ],
         "output": {
-          "path": "/Users/al/Desktop/electrode/wml_electrode_tutorial/.etmp"
+          "path": "/Users/al/Desktop/electrode/wml_electrode_simple_demo/.etmp"
         }
       },
       "__name": "DiskPlugin"
@@ -165,10 +165,10 @@
       "__name": "NoEmitOnErrorsPlugin"
     }
   ],
-  "context": "/Users/al/Desktop/electrode/wml_electrode_tutorial/src/client",
+  "context": "/Users/al/Desktop/electrode/wml_electrode_simple_demo/src/client",
   "entry": "./app.jsx",
   "output": {
-    "path": "/Users/al/Desktop/electrode/wml_electrode_tutorial/dist/js",
+    "path": "/Users/al/Desktop/electrode/wml_electrode_simple_demo/dist/js",
     "pathinfo": false,
     "publicPath": "http://localhost:2992/js/",
     "chunkFilename": "[hash].[name].js",
@@ -185,8 +185,8 @@
       }
     ],
     "modules": [
-      "/Users/al/Desktop/electrode/wml_electrode_tutorial/src",
-      "/Users/al/Desktop/electrode/wml_electrode_tutorial",
+      "/Users/al/Desktop/electrode/wml_electrode_simple_demo/src",
+      "/Users/al/Desktop/electrode/wml_electrode_simple_demo",
       "node_modules"
     ],
     "extensions": [
@@ -198,8 +198,8 @@
   "resolveLoader": {
     "symlinks": true,
     "modules": [
-      "/Users/al/Desktop/electrode/wml_electrode_tutorial/lib",
-      "/Users/al/Desktop/electrode/wml_electrode_tutorial"
+      "/Users/al/Desktop/electrode/wml_electrode_simple_demo/lib",
+      "/Users/al/Desktop/electrode/wml_electrode_simple_demo"
     ],
     "plugins": [
       {
@@ -223,7 +223,7 @@
         "test": {},
         "loader": [
           {
-            "loader": "/Users/al/Desktop/electrode/wml_electrode_tutorial/node_modules/extract-text-webpack-plugin/dist/loader.js",
+            "loader": "/Users/al/Desktop/electrode/wml_electrode_simple_demo/node_modules/extract-text-webpack-plugin/dist/loader.js",
             "options": {
               "omit": 1,
               "remove": true,
@@ -231,13 +231,13 @@
             }
           },
           {
-            "loader": "/Users/al/Desktop/electrode/wml_electrode_tutorial/node_modules/style-loader/index.js"
+            "loader": "/Users/al/Desktop/electrode/wml_electrode_simple_demo/node_modules/style-loader/index.js"
           },
           {
-            "loader": "/Users/al/Desktop/electrode/wml_electrode_tutorial/node_modules/css-loader/index.js?modules&localIdentName=[name]__[local]___[hash:base64:5]&-autoprefixer"
+            "loader": "/Users/al/Desktop/electrode/wml_electrode_simple_demo/node_modules/css-loader/index.js?modules&localIdentName=[name]__[local]___[hash:base64:5]&-autoprefixer"
           },
           {
-            "loader": "/Users/al/Desktop/electrode/wml_electrode_tutorial/node_modules/postcss-loader/index.js"
+            "loader": "/Users/al/Desktop/electrode/wml_electrode_simple_demo/node_modules/postcss-loader/index.js"
           }
         ]
       },
@@ -245,7 +245,7 @@
         "test": {},
         "use": [
           {
-            "loader": "/Users/al/Desktop/electrode/wml_electrode_tutorial/node_modules/extract-text-webpack-plugin/dist/loader.js",
+            "loader": "/Users/al/Desktop/electrode/wml_electrode_simple_demo/node_modules/extract-text-webpack-plugin/dist/loader.js",
             "options": {
               "omit": 1,
               "remove": true,
@@ -253,16 +253,16 @@
             }
           },
           {
-            "loader": "/Users/al/Desktop/electrode/wml_electrode_tutorial/node_modules/style-loader/index.js"
+            "loader": "/Users/al/Desktop/electrode/wml_electrode_simple_demo/node_modules/style-loader/index.js"
           },
           {
-            "loader": "/Users/al/Desktop/electrode/wml_electrode_tutorial/node_modules/css-loader/index.js?modules&localIdentName=[name]__[local]___[hash:base64:5]&-autoprefixer"
+            "loader": "/Users/al/Desktop/electrode/wml_electrode_simple_demo/node_modules/css-loader/index.js?modules&localIdentName=[name]__[local]___[hash:base64:5]&-autoprefixer"
           },
           {
-            "loader": "/Users/al/Desktop/electrode/wml_electrode_tutorial/node_modules/postcss-loader/index.js"
+            "loader": "/Users/al/Desktop/electrode/wml_electrode_simple_demo/node_modules/postcss-loader/index.js"
           },
           {
-            "loader": "/Users/al/Desktop/electrode/wml_electrode_tutorial/node_modules/sass-loader/lib/loader.js"
+            "loader": "/Users/al/Desktop/electrode/wml_electrode_simple_demo/node_modules/sass-loader/lib/loader.js"
           }
         ]
       },
@@ -270,7 +270,7 @@
         "test": {},
         "use": [
           {
-            "loader": "/Users/al/Desktop/electrode/wml_electrode_tutorial/node_modules/extract-text-webpack-plugin/dist/loader.js",
+            "loader": "/Users/al/Desktop/electrode/wml_electrode_simple_demo/node_modules/extract-text-webpack-plugin/dist/loader.js",
             "options": {
               "omit": 1,
               "remove": true,
@@ -278,16 +278,16 @@
             }
           },
           {
-            "loader": "/Users/al/Desktop/electrode/wml_electrode_tutorial/node_modules/style-loader/index.js"
+            "loader": "/Users/al/Desktop/electrode/wml_electrode_simple_demo/node_modules/style-loader/index.js"
           },
           {
-            "loader": "/Users/al/Desktop/electrode/wml_electrode_tutorial/node_modules/css-loader/index.js?modules&localIdentName=[name]__[local]___[hash:base64:5]&-autoprefixer"
+            "loader": "/Users/al/Desktop/electrode/wml_electrode_simple_demo/node_modules/css-loader/index.js?modules&localIdentName=[name]__[local]___[hash:base64:5]&-autoprefixer"
           },
           {
-            "loader": "/Users/al/Desktop/electrode/wml_electrode_tutorial/node_modules/postcss-loader/index.js"
+            "loader": "/Users/al/Desktop/electrode/wml_electrode_simple_demo/node_modules/postcss-loader/index.js"
           },
           {
-            "loader": "/Users/al/Desktop/electrode/wml_electrode_tutorial/node_modules/stylus-relative-loader/index.js"
+            "loader": "/Users/al/Desktop/electrode/wml_electrode_simple_demo/node_modules/stylus-relative-loader/index.js"
           }
         ]
       },
@@ -295,44 +295,44 @@
         "test": {},
         "use": [
           {
-            "loader": "/Users/al/Desktop/electrode/wml_electrode_tutorial/node_modules/url-loader/index.js",
+            "loader": "/Users/al/Desktop/electrode/wml_electrode_simple_demo/node_modules/url-loader/index.js",
             "options": {
               "limit": 1000,
               "mimetype": "application/font-woff"
             }
           },
-          "/Users/al/Desktop/electrode/wml_electrode_tutorial/node_modules/isomorphic-loader/index.js"
+          "/Users/al/Desktop/electrode/wml_electrode_simple_demo/node_modules/isomorphic-loader/index.js"
         ]
       },
       {
         "test": {},
         "use": [
-          "/Users/al/Desktop/electrode/wml_electrode_tutorial/node_modules/file-loader/index.js",
-          "/Users/al/Desktop/electrode/wml_electrode_tutorial/node_modules/isomorphic-loader/index.js"
+          "/Users/al/Desktop/electrode/wml_electrode_simple_demo/node_modules/file-loader/index.js",
+          "/Users/al/Desktop/electrode/wml_electrode_simple_demo/node_modules/isomorphic-loader/index.js"
         ]
       },
       {
         "test": {},
         "use": [
           {
-            "loader": "/Users/al/Desktop/electrode/wml_electrode_tutorial/node_modules/electrode-cdn-file-loader/index.js",
+            "loader": "/Users/al/Desktop/electrode/wml_electrode_simple_demo/node_modules/electrode-cdn-file-loader/index.js",
             "options": {
               "limit": 10000
             }
           },
-          "/Users/al/Desktop/electrode/wml_electrode_tutorial/node_modules/isomorphic-loader/index.js"
+          "/Users/al/Desktop/electrode/wml_electrode_simple_demo/node_modules/isomorphic-loader/index.js"
         ]
       },
       {
         "test": {},
         "use": [
           {
-            "loader": "/Users/al/Desktop/electrode/wml_electrode_tutorial/node_modules/file-loader/index.js",
+            "loader": "/Users/al/Desktop/electrode/wml_electrode_simple_demo/node_modules/file-loader/index.js",
             "options": {
               "name": "manifest.json"
             }
           },
-          "/Users/al/Desktop/electrode/wml_electrode_tutorial/node_modules/web-app-manifest-loader/index.js"
+          "/Users/al/Desktop/electrode/wml_electrode_simple_demo/node_modules/web-app-manifest-loader/index.js"
         ]
       }
     ]
@@ -345,4 +345,56 @@
     }
   }
 }
-2018-05-22T21:42:21.873Z - info: APP_SRC_DIR set to src/
+2018-05-22T22:57:35.864Z - info: APP_SRC_DIR set to src/
+2018-05-22T22:58:11.230Z - info: APP_SRC_DIR set to src/
+2018-05-22T22:58:13.625Z - info: APP_SRC_DIR set to src/
+2018-05-22T22:58:44.795Z - info: APP_SRC_DIR set to src/
+2018-05-22T22:59:09.256Z - info: APP_SRC_DIR set to src/
+2018-05-22T22:59:33.824Z - info: APP_SRC_DIR set to src/
+2018-05-22T23:00:07.696Z - info: APP_SRC_DIR set to src/
+2018-05-22T23:01:17.839Z - info: APP_SRC_DIR set to src/
+2018-05-22T23:01:52.896Z - info: APP_SRC_DIR set to src/
+2018-05-22T23:02:49.999Z - info: APP_SRC_DIR set to src/
+2018-05-22T23:03:06.559Z - info: APP_SRC_DIR set to src/
+2018-05-22T23:04:13.305Z - info: APP_SRC_DIR set to src/
+2018-05-22T23:04:35.347Z - info: APP_SRC_DIR set to src/
+2018-05-22T23:05:20.014Z - info: APP_SRC_DIR set to src/
+2018-05-22T23:05:28.308Z - info: APP_SRC_DIR set to src/
+2018-05-22T23:05:37.596Z - info: APP_SRC_DIR set to src/
+2018-05-22T23:05:51.962Z - info: APP_SRC_DIR set to src/
+2018-05-22T23:06:54.193Z - info: APP_SRC_DIR set to src/
+2018-05-22T23:07:04.996Z - info: APP_SRC_DIR set to src/
+2018-05-22T23:07:15.308Z - info: APP_SRC_DIR set to src/
+2018-05-22T23:07:37.772Z - info: APP_SRC_DIR set to src/
+2018-05-22T23:07:46.073Z - info: APP_SRC_DIR set to src/
+2018-05-22T23:08:59.868Z - info: APP_SRC_DIR set to src/
+2018-05-22T23:10:27.752Z - info: APP_SRC_DIR set to src/
+2018-05-22T23:10:52.970Z - info: APP_SRC_DIR set to src/
+2018-05-22T23:11:17.687Z - info: APP_SRC_DIR set to src/
+2018-05-22T23:11:27.425Z - info: APP_SRC_DIR set to src/
+2018-05-22T23:11:36.187Z - info: APP_SRC_DIR set to src/
+2018-05-22T23:16:15.002Z - info: APP_SRC_DIR set to src/
+2018-05-22T23:16:45.332Z - info: APP_SRC_DIR set to src/
+2018-05-22T23:16:48.072Z - info: APP_SRC_DIR set to src/
+2018-05-22T23:16:55.150Z - info: APP_SRC_DIR set to src/
+2018-05-22T23:17:26.170Z - info: APP_SRC_DIR set to src/
+2018-05-22T23:18:10.364Z - info: APP_SRC_DIR set to src/
+2018-05-22T23:18:16.827Z - info: APP_SRC_DIR set to src/
+2018-05-22T23:18:50.327Z - info: APP_SRC_DIR set to src/
+2018-05-22T23:19:30.383Z - info: APP_SRC_DIR set to src/
+2018-05-22T23:19:50.625Z - info: APP_SRC_DIR set to src/
+2018-05-22T23:19:53.099Z - info: APP_SRC_DIR set to src/
+2018-05-22T23:22:45.770Z - info: APP_SRC_DIR set to src/
+2018-05-22T23:22:48.176Z - info: APP_SRC_DIR set to src/
+2018-05-22T23:22:52.586Z - info: APP_SRC_DIR set to src/
+2018-05-23T02:18:37.186Z - info: APP_SRC_DIR set to src/
+2018-05-23T02:18:45.094Z - info: APP_SRC_DIR set to src/
+2018-05-23T02:18:53.482Z - info: APP_SRC_DIR set to src/
+2018-05-23T02:18:58.283Z - info: APP_SRC_DIR set to src/
+2018-05-23T02:19:07.299Z - info: APP_SRC_DIR set to src/
+2018-05-23T02:20:30.389Z - info: APP_SRC_DIR set to src/
+2018-05-23T02:20:40.054Z - info: APP_SRC_DIR set to src/
+2018-05-23T02:21:16.710Z - info: APP_SRC_DIR set to src/
+2018-05-23T02:21:35.473Z - info: APP_SRC_DIR set to src/
+2018-05-23T02:21:59.486Z - info: APP_SRC_DIR set to src/
+2018-05-23T02:22:27.370Z - info: APP_SRC_DIR set to src/

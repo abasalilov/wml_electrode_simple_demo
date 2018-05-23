@@ -8,4 +8,5 @@ function dotify(p) {
 
 module.exports = {
   extends: dotify(path.relative(__dirname, archetypeEslint))
+  "plugins":["react", "import"]
 };

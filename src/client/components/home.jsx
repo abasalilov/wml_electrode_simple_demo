@@ -23,11 +23,12 @@ import electrodePng from "../images/electrode.png";
 import DemoStates from "./demo-states";
 import DemoPureStates from "./demo-pure-states";
 import { DemoButtons } from "./demo-buttons";
+import { DropDown } from "./DropDown";
 /**/
 import Notifications from "react-notify-toast";
 /**/
 
-export default () =>
+export default () => (
   <div className={custom.container}>
     {/**/}
     <Notifications />
@@ -36,9 +37,13 @@ export default () =>
     <section className={custom.header}>
       <h2 className={skeleton.title}>
         Simple auto part drop down menu using{" "}
-        <a href="https://github.com/electrode-io">{"Electrode"} <img src={electrodePng} /></a>
+        <a href="https://github.com/electrode-io">
+          {"Electrode"} <img src={electrodePng} />
+        </a>
       </h2>
     </section>
+
+    <DropDown />
 
     <div className={custom["docs-section"]}>
       <DemoStates />
@@ -51,4 +56,5 @@ export default () =>
     <div className={custom["docs-section"]}>
       <DemoButtons />
     </div>
-  </div>;
+  </div>
+);
