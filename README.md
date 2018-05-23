@@ -16,6 +16,8 @@ ensure you have the correct system requirements: https://docs.electrode.io/overv
 2.  from this directory: npm install or yarn i
 3.  `sh clap dev`
 4.  navigate to localhost:3000;
+5.  the interesting parts are in: /Users/al/Desktop/electrode/wml_electrode_simple_demo/src/client/utils/index.js
+    & : /Users/al/Desktop/electrode/wml_electrode_simple_demo/src/client/components/DropDown/DropDown.jsx
 
 ## License
 
