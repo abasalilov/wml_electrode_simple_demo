@@ -24,7 +24,8 @@ import { connect } from "react-redux";
 import {
   setYear as createSetYearActionCreator,
   setMake as createSetMakeActionCreator,
-  setModel as createSetModelActionCreator
+  setModel as createSetModelActionCreator,
+  setEngine as createSetEngineActionCreator
 } from "../../actions";
 
 const styles = {
@@ -102,8 +103,7 @@ class DropDownComponent extends React.Component {
       const {
         engine: { cylinders, engineSize, trim }
       } = datum;
-      console.log("datum", datum);
-      const engineData = cylinders + " - " + engineSize + " trim:" + trim;
+      const engineData = cylinders + " - " + engineSize + " trim: " + trim;
       return (
         <option key={trim} value={engineData}>
           {engineData}
@@ -138,15 +138,14 @@ class DropDownComponent extends React.Component {
     this.makeEngineReq(md);
   }
 
-  setEngine(engine) {
-    console.log("engine", engine);
+  showDetailedInfo() {
+    // todo:get and render the full detailed report;
   }
 
   render() {
     const car = new DropDownUtil();
     const years = car.getYears();
     const { minYear, maxYear } = years;
-    console.log("this.props", this.props);
     return (
       <div className={custom.container}>
         <section className={custom.header}>
@@ -200,14 +199,22 @@ class DropDownComponent extends React.Component {
                 <select
                   name={"engine"}
                   style={styles.select}
-                  value={this.state.eng}
-                  onChange={e => this.setEngine(e.target.value)}
+                  value={this.props.engine.engine}
+                  onChange={e => this.props.setEngine(e.target.value)}
                 >
                   <option value="" default>
                     Engine
                   </option>
                   {this.renderEngineOptions(this.state.engineOptions)}
                 </select>
+              )}
+            {this.props.model.model !== "Model" &&
+              this.state.engineOptions.length === 0 && (
+                <div>
+                  No Engine Options for this model{console.log(
+                    this.props.model
+                  )}
+                </div>
               )}
           </div>
         </div>
@@ -228,14 +235,16 @@ const mapStateToProps = state => {
   return {
     year: state.year,
     make: state.make,
-    model: state.model
+    model: state.model,
+    engine: state.engine
   };
 };
 
 const mapDispatchToProps = dispatch => ({
   setYear: yr => dispatch(createSetYearActionCreator(yr)),
   setMake: mk => dispatch(createSetMakeActionCreator(mk)),
-  setModel: md => dispatch(createSetModelActionCreator(md))
+  setModel: md => dispatch(createSetModelActionCreator(md)),
+  setEngine: eng => dispatch(createSetEngineActionCreator(eng))
 });
 
 export const DropDown = connect(mapStateToProps, mapDispatchToProps)(

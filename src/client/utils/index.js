@@ -180,7 +180,6 @@ export default class DropDownUtil {
   }
 
   getEngine(data) {
-    // console.log('data into the engines', data)
     const cylinders = data.engineCyclinders + " Cylinders";
     const engSizeLiters = data.engineCC / 1000;
     const roundedEngSizeLiters =

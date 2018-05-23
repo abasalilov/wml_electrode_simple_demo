@@ -1,8 +1,8 @@
-2018-05-23T17:24:30.422Z - info: No custom webpack config webpack.config.dev.js found in dirs CWD; CWD/archetype/config/webpack
-2018-05-23T17:24:30.434Z - info: Entry point configuration /Users/al/Desktop/electrode/wml_electrode_simple_demo/src/client/entry.config.js is not found, using default entry point...
-2018-05-23T17:24:31.053Z - info: PWA enabled with config from /Users/al/Desktop/electrode/wml_electrode_simple_demo/config/sw-config.js
-2018-05-23T17:24:31.141Z - info: Not disabling NodeSourcePlugin.  NODE_ENV: 'development'
-2018-05-23T17:24:31.142Z - verbose: Final Webpack config {
+2018-05-23T18:49:45.346Z - info: No custom webpack config webpack.config.dev.js found in dirs CWD; CWD/archetype/config/webpack
+2018-05-23T18:49:45.359Z - info: Entry point configuration /Users/al/Desktop/electrode/wml_electrode_simple_demo/src/client/entry.config.js is not found, using default entry point...
+2018-05-23T18:49:46.350Z - info: PWA enabled with config from /Users/al/Desktop/electrode/wml_electrode_simple_demo/config/sw-config.js
+2018-05-23T18:49:46.548Z - info: Not disabling NodeSourcePlugin.  NODE_ENV: 'development'
+2018-05-23T18:49:46.549Z - verbose: Final Webpack config {
   "cache": true,
   "plugins": [
     {
@@ -345,65 +345,13 @@
     }
   }
 }
-2018-05-23T17:24:44.501Z - info: APP_SRC_DIR set to src/
-2018-05-23T17:25:57.550Z - info: APP_SRC_DIR set to src/
-2018-05-23T17:27:38.504Z - info: APP_SRC_DIR set to src/
-2018-05-23T17:29:20.566Z - info: APP_SRC_DIR set to src/
-2018-05-23T17:29:43.804Z - info: APP_SRC_DIR set to src/
-2018-05-23T17:29:46.488Z - info: APP_SRC_DIR set to src/
-2018-05-23T17:30:45.235Z - info: APP_SRC_DIR set to src/
-2018-05-23T17:31:15.113Z - info: APP_SRC_DIR set to src/
-2018-05-23T17:34:06.070Z - info: APP_SRC_DIR set to src/
-2018-05-23T17:41:45.007Z - info: APP_SRC_DIR set to src/
-2018-05-23T17:48:32.918Z - info: APP_SRC_DIR set to src/
-2018-05-23T17:49:44.762Z - info: APP_SRC_DIR set to src/
-2018-05-23T17:49:54.197Z - info: APP_SRC_DIR set to src/
-2018-05-23T17:50:21.474Z - info: APP_SRC_DIR set to src/
-2018-05-23T17:59:37.872Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:01:17.660Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:01:56.774Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:02:40.470Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:02:54.403Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:02:59.483Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:03:43.913Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:07:46.112Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:09:13.096Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:09:47.595Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:10:14.814Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:17:41.174Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:21:46.598Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:23:38.835Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:23:47.008Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:24:00.456Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:25:41.511Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:25:50.814Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:27:08.150Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:28:32.919Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:28:35.564Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:28:47.152Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:29:06.419Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:32:38.488Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:33:37.518Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:33:50.397Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:34:28.789Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:34:38.008Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:34:42.852Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:34:49.182Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:35:22.784Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:35:25.892Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:35:33.664Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:36:14.237Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:37:08.918Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:37:18.944Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:37:21.917Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:38:08.958Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:38:45.195Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:40:44.368Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:41:19.123Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:41:27.236Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:42:08.522Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:42:45.358Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:43:38.699Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:43:44.321Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:44:15.152Z - info: APP_SRC_DIR set to src/
-2018-05-23T18:45:11.909Z - info: APP_SRC_DIR set to src/
+2018-05-23T18:49:58.634Z - info: APP_SRC_DIR set to src/
+2018-05-23T19:07:00.823Z - info: APP_SRC_DIR set to src/
+2018-05-23T19:07:54.493Z - info: APP_SRC_DIR set to src/
+2018-05-23T19:09:24.344Z - info: APP_SRC_DIR set to src/
+2018-05-23T19:10:25.911Z - info: APP_SRC_DIR set to src/
+2018-05-23T19:11:18.779Z - info: APP_SRC_DIR set to src/
+2018-05-23T19:11:55.671Z - info: APP_SRC_DIR set to src/
+2018-05-23T19:13:23.429Z - info: APP_SRC_DIR set to src/
+2018-05-23T19:13:29.019Z - info: APP_SRC_DIR set to src/
+2018-05-23T19:13:34.073Z - info: APP_SRC_DIR set to src/

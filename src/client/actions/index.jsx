@@ -37,8 +37,9 @@ export const setMake = mk => {
   };
 };
 
-export const setTrim = () => {
+export const setEngine = eng => {
   return {
-    type: "SET_TRIM"
+    type: "SET_ENGINE",
+    engine: eng
   };
 };

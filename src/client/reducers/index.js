@@ -46,13 +46,12 @@ const make = (store, action) => {
 
 const model = (store, action) => {
   if (action.type === "SET_MODEL") {
-    console.log("action", action);
     return {
       model: action.model
     };
   }
 
-  return store || { make: "Model" };
+  return store || { model: "Model" };
 };
 
 const engine = (store, action) => {

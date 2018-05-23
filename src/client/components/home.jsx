@@ -41,9 +41,8 @@ export default () => (
           {"Electrode"} <img src={electrodePng} />
         </a>
       </h2>
+      <DropDown />
     </section>
-
-    <DropDown />
 
     <div className={custom["docs-section"]}>add parts demo here</div>
   </div>
